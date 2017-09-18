@@ -10,7 +10,7 @@ gcc -g -o jack_test_play.out jack_test_play.c  -lsndfile  -ljack
 This will work for both Jack1 and Jack2
 
 First run the Jack Server , for Jack1 use the following command
-/usr/bin/jackd -d alsa  -P "hw:0,0,0"  -r 192000
+/usr/bin/jackd -d alsa  -P "hw:0,0"  -r 192000
 
 where -P option is the alsa hw device
       -r sample rate
