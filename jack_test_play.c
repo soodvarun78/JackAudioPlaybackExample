@@ -38,11 +38,11 @@ typedef struct _framework_struct {
 	   jack_port_t *port[2]; // Port for Handle
 	   char port_name[2][32]; //Port Name
 	   char *filename; // Name of the file to playback
-       SNDFILE* sndfile; // Handle returned by SNFFILe library
+       SNDFILE* sndfile; // Handle returned by SNDFILE library
 	   float *sampleBuf; // Buffer for Playback
 	   sf_count_t (*rw_function)(SNDFILE *_sndfile, float *ptr, sf_count_t frames) ; //Read write function
-	   unsigned int loop_frames; // Total Number of Frames in wav File
-	   unsigned int offsetInBytes;  // Total frames Playback till now 
+	   unsigned int loop_frames; // Total Number of Frames to read in wav file
+	   unsigned int offsetInBytes;  // Total Bytes Playbacked till now 
 }framework_struct;
 
 int play_process_cbk (jack_nframes_t nframes, void *arg);
