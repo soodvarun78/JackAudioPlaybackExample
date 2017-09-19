@@ -1,1 +1,1 @@
-Read README for information on the project
+Read Readme.txt for information on the project
